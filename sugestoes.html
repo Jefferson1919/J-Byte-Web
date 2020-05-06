@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Tags para layout responsivo com Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> <!-- CSS do Bootstrap --> 
+		<link href="folhaEstilo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> <!-- a biblioteca jQuery é utilizada pelo bootstrap, então ela deve ser chamada antes do bootstrap.min.js-->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<title>Sugestões :: JByte</title>
+		<!--<script>
+			$(document).ready(function(){ //método que aguarda a página carregar
+				$("#btSubmitDuvidas").click(function(){ //método que é executado ao clicar no #btMostrar
+					alert("Suas dúvidas foram enviado e em breve entraremos em contato!");
+				});
+			});
+		</script>-->
+	</head>
+	
+	<body class="pt-5">	
+	<div class="container-fluid pl-0 pr-0 pt-4">
+		<div class="container text-center">
+		<h1 class="text-white p-1 mt-3">Sugestões</h1>
+		<h5 class="text-white p-1 mt-0">Envie-nos suas sugestões ou dúvidas!</h5>
+		</div>
+			<div class="fixed-top">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light pl-5 pb-0 pt-0">
+					<a href="index.html">
+						<img src="images/logo.png" width="75" height="75" alt="Home">
+					</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 	aria-label="Alterna navegação">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Início</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="servicos.html">Nossos serviços</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contato.html">Contato</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="sugestoes.html">Sugestões</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="Sobre.html">Sobre</a>
+						</li>
+					</ul>
+				</div>
+				</nav>
+			</div>
+		<div class="container">
+			<form class="form-text container p-2 col-xs-12 col-sm-12 col-md-4 col-lg-4" autocomplete="on">
+			<fieldset>
+				<div class="bg-color-especial text-white p-2 mt-2">
+					<label for="idArea"><h6>Mensagem</h6></label>
+					<textarea id="idArea" rows="7" cols="49" class="form-control" name="mensage" placeholder="Sua mensagem aqui" required autofocus></textarea><br>
+				</div>
+				<div class="text-center m-1">
+					<button type="submit" id="btSubmitDuvidas" class="btn btn-warning btn-lg">Submeter</button>
+				</div>	
+			</fieldset>
+			</form>
+			<footer class="container-fluid blockquote-footer mt-5 text-center" id="container-rodape">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+								<p><span>
+									© Copyright 2019 JByte. Rua Marcos Porfírio, Itapipoca - CE
+									</span>
+								</p>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+								<p>Desenvolvido por J Byte - Jefferson</p>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+								<p><a class="card-link" href="contato.html">Contate-nos</a></p>
+							</div>
+						</div>
+					</div>
+			</footer>
+		</div>
+	</body>
+</html>
