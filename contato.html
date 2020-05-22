@@ -1,62 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Tags para layout responsivo com Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> <!-- CSS do Bootstrap --> 
-		<link href="folhaEstilo.css" rel="stylesheet" type="text/css"/>
-		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> <!-- a biblioteca jQuery é utilizada pelo bootstrap, então ela deve ser chamada antes do bootstrap.min.js-->
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/jquery.validate.min.js"></script> <!-- jQuery para validações -->
-		<script type="text/javascript" src="js/additional-methods.min.js"></script> <!-- jQuery para validações -->
-		<script type="text/javascript" src="js/localization/messages_pt_BR.min.js"></script> <!-- jQuery para validações -->
-		
-		<title>Contato :: JByte</title>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$( ".p1" ).text( "The DOM is now loaded and can be manipulated." );
-				$("#form-cadastro").validate({
-					rules:{
-						nome: {
-							maxlength: 100,
-							minlength: 10,
-							minWords: 2
-						},
-						telefone: {
-							maxlength: 15,
-							minlength: 8
-						},
-						email: {
-							email: true
-						},
-						mensagem: {
-							minlength: 20
-						}
-					},
-					submitHandler: function(form){
-						form.submit();
-						alert("Seu formulário foi enviado e em breve retornaremos contato.");
-					}
-				});
-			});
-		</script>
-	</head>
-	
-	<body class="pt-5">	
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Tags para layout responsivo com Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> <!-- CSS do Bootstrap -->
+	<link href="folhaEstilo.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!-- a biblioteca jQuery é utilizada pelo bootstrap, então ela deve ser chamada antes do bootstrap.min.js-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script> <!-- jQuery para validações -->
+	<script type="text/javascript" src="js/additional-methods.min.js"></script> <!-- jQuery para validações -->
+	<script type="text/javascript" src="js/localization/messages_pt_BR.min.js"></script> <!-- jQuery para validações -->
+
+	<title>Contato :: JByte</title>
+</head>
+
+<body class="pt-5">
 	<div class="container-fluid pl-0 pr-0 pt-4">
 		<div class="container text-center">
-		<h1 class="text-white p-1 mt-3">Contate-nos</h1>
-		<p class="p1 text-white">Oi</p>
-		<h5 class="text-white p-1 mt-0">O primeiro serviço é com 20% de desconto!</h5>
+			<h1 class="text-white p-1 mt-3">Contate-nos</h1>
+			<p class="p1 text-white" id="testeDom"></p>
+			<h5 class="text-white p-1 mt-0">O primeiro serviço é com 20% de desconto!</h5>
 		</div>
-			<div class="fixed-top">
-				<nav class="navbar navbar-expand-lg navbar-light bg-light pl-5 pb-0 pt-0">
-					<a href="index.html">
-						<img src="images/logo.png" width="75" height="75" alt="Home">
-					</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 	aria-label="Alterna navegação">
+		<div class="fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light pl-5 pb-0 pt-0">
+				<a href="index.html">
+					<img src="images/logo.png" width="75" height="75" alt="Home">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
@@ -78,87 +53,110 @@
 						</li>
 					</ul>
 				</div>
-				</nav>
-			</div>
+			</nav>
+		</div>
 		<div class="container">
-			<form class="form-text container p-2 col-xs-12 col-sm-12 col-md-4 col-lg-4" id="form-cadastro" autocomplete="on" method="post">
-			<fieldset>
-				<div class="form-group bg-color-especial text-white p-2 mt-1">
-					<label for="idNome"><h6>Usuário</h6></label>
-					<input type="text" id="idNome" class="form-control" name="nome" placeholder="Nome" required autofocus/>
-				</div>
-		
-				<div class="form-group bg-color-especial text-white p-2 mt-1">
-					<label for="idTelefone"><h6>Telefone</h6></label>
-					<input type="tel" id="idTelefone" class="form-control" name="telefone" placeholder="DDD + Número" required/>
-				</div>
-		
-				<div class="form-group bg-color-especial text-white p-2 mt-1">
-					<label for="idEmail"><h6>E-mail</h6></label>
-					<input type="email" id="idEmail" class="form-control" name="email" placeholder="user@exemplo.com" required/>
-				</div>
-		
-				<div class="form-group bg-color-especial text-white p-2">
-					<label class="">
-					<span><h6>Estou interessado em</h6></span>
-					</label><br>
-				<div class="custom-control custom-radio pb-1">
-					<input class="custom-control-input" type="radio" name="radios" id="idRadios1" value="opcao1">
-					<label class="custom-control-label" for="idRadios1">
-					Smartphone ou Celular
-					</label>
-				</div>
-				<div class="custom-control custom-radio pb-1">
-					<input class="custom-control-input" type="radio" name="radios" id="idRadios2" value="opcao2">
-					<label class="custom-control-label" for="idRadios2">
-					Notebook ou Desktop
-					</label>
-				</div>
-				<div class="custom-control custom-radio pb-1">
-					<input class="custom-control-input" type="radio" name="radios" id="idRadios3" value="opcao3">
-					<label class="custom-control-label" for="idRadios3">
-					Redes de computadores (Ex.: WiFi)
-					</label>
-				</div>
-				<div class="custom-control custom-radio pb-1">
-					<input class="custom-control-input" type="radio" name="radios" id="idRadios4" value="opcao3">
-					<label class="custom-control-label" for="idRadios4">
-					Software ou Desenvolvimento de Software
-					</label>
-				</div>
-				</div>
-		
-				<div class="bg-color-especial text-white p-2 mt-2">
-					<label for="idArea"><h6>Mensagem</h6></label>
-					<textarea id="idArea" rows="7" cols="49" class="form-control" name="mensagem" placeholder="Sua mensagem aqui" required></textarea><br>
-				</div>
-		
-				<div class="text-center m-1">
-					<button type="submit" id="btSubmit" class="btn btn-warning btn-lg">Submeter</button>
-				</div>	
-		</fieldset>
-		</form>
-		
-			<footer class="container-fluid blockquote-footer mt-5 text-center" id="container-rodape">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<p><span>
-									© Copyright 2019 JByte. Rua Marcos Porfírio, Itapipoca - CE
-									</span>
-								</p>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<p>Desenvolvido por J Byte - Jefferson</p>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<p><a class="card-link" href="contato.html">Contate-nos</a></p>
-							</div>
+			<form class="form-text container p-2 col-xs-12 col-sm-12 col-md-4 col-lg-4" id="form-cadastro"
+				autocomplete="on" method="post">
+				<fieldset>
+					<div class="form-group bg-color-especial text-white p-2 mt-1">
+						<label for="idNome">
+							<h6>Usuário</h6>
+						</label>
+						<input type="text" id="idNome" class="form-control" name="nome" placeholder="Nome" required
+							autofocus />
+					</div>
+
+					<div class="form-group bg-color-especial text-white p-2 mt-1">
+						<label for="idTelefone">
+							<h6>Telefone</h6>
+						</label>
+						<input type="tel" id="idTelefone" class="form-control" name="telefone"
+							placeholder="DDD + Número" required />
+					</div>
+
+					<div class="form-group bg-color-especial text-white p-2 mt-1">
+						<label for="idEmail">
+							<h6>E-mail</h6>
+						</label>
+						<input type="email" id="idEmail" class="form-control" name="email"
+							placeholder="user@exemplo.com" required />
+					</div>
+
+					<div class="form-group bg-color-especial text-white p-2">
+						<label class="">
+							<span>
+								<h6>Estou interessado em</h6>
+							</span>
+						</label><br>
+						<div class="custom-control custom-radio pb-1">
+							<input class="custom-control-input" type="radio" name="radios" id="idRadios1"
+								value="opcao1">
+							<label class="custom-control-label" for="idRadios1">
+								Smartphone ou Celular
+							</label>
+						</div>
+						<div class="custom-control custom-radio pb-1">
+							<input class="custom-control-input" type="radio" name="radios" id="idRadios2"
+								value="opcao2">
+							<label class="custom-control-label" for="idRadios2">
+								Notebook ou Desktop
+							</label>
+						</div>
+						<div class="custom-control custom-radio pb-1">
+							<input class="custom-control-input" type="radio" name="radios" id="idRadios3"
+								value="opcao3">
+							<label class="custom-control-label" for="idRadios3">
+								Redes de computadores (Ex.: WiFi)
+							</label>
+						</div>
+						<div class="custom-control custom-radio pb-1">
+							<input class="custom-control-input" type="radio" name="radios" id="idRadios4"
+								value="opcao3">
+							<label class="custom-control-label" for="idRadios4">
+								Software ou Desenvolvimento de Software
+							</label>
 						</div>
 					</div>
+
+					<div class="bg-color-especial text-white p-2 mt-2">
+						<label for="idArea">
+							<h6>Mensagem</h6>
+						</label>
+						<textarea id="idArea" rows="7" cols="49" class="form-control" name="mensagem"
+							placeholder="Sua mensagem aqui" required></textarea><br>
+					</div>
+
+					<div class="text-center m-1">
+						<button type="submit" id="btSubmit" class="btn btn-warning btn-lg" onclick="">
+							Submeter
+						</button>
+					</div>
+
+				</fieldset>
+			</form>
+
+			<footer class="container-fluid blockquote-footer mt-5 text-center" id="container-rodape">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+							<p><span>
+									© Copyright 2019 JByte. Rua Marcos Porfírio, Itapipoca - CE
+								</span>
+							</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+							<p>Desenvolvido por J Byte - Jefferson</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+							<p><a class="card-link" href="contato.html">Contate-nos</a></p>
+						</div>
+					</div>
+				</div>
 			</footer>
 		</div>
-	</head>
-		
-	</body>
+	</div>
+	<script src="validarSubmeter.js"></script>
+</body>
+
 </html>

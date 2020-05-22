@@ -1,48 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Tags para layout responsivo com Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> <!-- CSS do Bootstrap --> 
-		<link href="folhaEstilo.css" rel="stylesheet" type="text/css"> <!-- CSS do Bootstrap --> 
-		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> <!-- a biblioteca jQuery é utilizada pelo bootstrap, então ela deve ser chamada antes do bootstrap.min.js-->
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<title>Início :: J Byte</title>
-		<script>
-			var seletor = 1; //variável que indica a imagem atual
-			function trocaFoto() {
-				if(seletor == 1) { //se seletor == 1, mostra imagem 1
-					$("#imgGaleria").attr("src", "images/img1.png"); 
-					 seletor = 2;
-				} else if(seletor == 2) { //se seletor == 2, mostra imagem 2
-					$("#imgGaleria").attr("src", "images/img2.png"); 
-					 seletor = 3;
-				} else if(seletor == 3) { //se seletor == 3, mostra imagem 3
-					$("#imgGaleria").attr("src", "images/img3.png"); 
-					seletor = 4;
-				} else if(seletor == 4) {
-					$("#imgGaleria").attr("src", "images/img4.png");
-					seletor =1;
-				}
-			}
-			
-			$(document).ready(function(){ //método que aguarda a página carregar
-				setInterval(trocaFoto, 3000); //chamada da função troca foto a cada 2000ms
-			});
-		</script>
-	</head>
-	<body class="pt-5">
-		<div class="container-fluid pl-0 pr-0 pt-4">
-			<div class="fixed-top">
-				<nav class="navbar navbar-expand-lg navbar-light bg-light pl-5 pb-0 pt-0">
-					<a href="index.html">
-						<img src="images/logo.png" width="75" height="75" alt="Home">
-					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 	aria-label="Alterna navegação">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Tags para layout responsivo com Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> <!-- CSS do Bootstrap -->
+	<link href="folhaEstilo.css" rel="stylesheet" type="text/css"> <!-- CSS do Bootstrap -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!-- a biblioteca jQuery é utilizada pelo bootstrap, então ela deve ser chamada antes do bootstrap.min.js-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<title>Início :: J Byte</title>
+	<script src="galeria.js"></script>
+</head>
+
+<body class="pt-5">
+	<div class="container-fluid pl-0 pr-0 pt-4">
+		<div class="fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light pl-5 pb-0 pt-0">
+				<a href="index.html">
+					<img src="images/logo.png" width="75" height="75" alt="Home">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 						<li class="nav-item">
@@ -62,23 +45,29 @@
 						</li>
 					</ul>
 				</div>
-				</nav>
-			</div>
-		<div class="container text-center bt-1">
-		<header class="bt-1">
-		<h1 class="bg-color-especial text-white p-1 mt-1">Seja bem vindo a J Byte!</h1>
-		<h2 class="bg-color-especial text-white p-1 mt-1">Nós fazemos o que precisa ser feito em termos de TI</h2>
-		</header>
-		
-		<div class="row text-center">
-			<main class="conteiner col-sm-12 col-md-12 col-lg-12">
-				<img id="imgGaleria" src="images/logo.png" class="img-fluid img-thumbnail rounded mx-auto d-block" width="399rem"  alt="Logo J Byte com apresentação de imagens referentes a promoções e produtos. Também pode ser melhor explicado na tela Nossos serviços";
-			</main>
+			</nav>
 		</div>
-		
-		<footer class="container-fluid blockquote-footer pl-5 pr-5 mt-5 w-100" id="container-rodape"><!-- fixed-bottom -> segura o elemento na parte inferior da tela flutuando -->
+		<div class="container text-center bt-1">
+			<header class="bt-1">
+				<h1 class="bg-color-especial text-white p-1 mt-1">Seja bem vindo a J Byte!</h1>
+				<h2 class="bg-color-especial text-white p-1 mt-1">Nós fazemos o que precisa ser feito em termos de TI
+				</h2>
+			</header>
+
+
+
+			<div class="row text-center">
+				<main class="conteiner col-sm-12 col-md-12 col-lg-12">
+					<img id="imgGaleria" src="images/logo.png" class="img-fluid img-thumbnail rounded mx-auto d-block"
+						width="399rem"
+						alt="Logo J Byte com apresentação de imagens referentes a promoções e produtos. Também pode ser melhor explicado na tela Nossos serviços"
+						; </main>
+			</div>
+
+			<footer class="container-fluid blockquote-footer pl-5 pr-5 mt-5 w-100" id="container-rodape">
+				<!-- fixed-bottom -> segura o elemento na parte inferior da tela flutuando -->
 				<div class="container text-center">
-					<div class = "row">
+					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 							<p><span class="icon">© Copyright 2019 JByte. Rua Marcos Porfírio, Itapipoca - CE</span></p>
 						</div>
@@ -92,6 +81,6 @@
 				</div>
 			</footer>
 		</div>
-	</body>
+</body>
 
 </html>

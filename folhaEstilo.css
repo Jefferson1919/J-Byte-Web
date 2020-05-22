@@ -3,7 +3,7 @@
 }
 
 m-5{
-	border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .fixo {
@@ -14,9 +14,13 @@ m-5{
 }
 
 body{
-	background-image: url("images/bg-image.png");
+    background-image: url("images/bg-image.png");
 }
 
 div{
 	border-radius: 1rem;
+}
+
+label.error{
+    color: red;
 }
