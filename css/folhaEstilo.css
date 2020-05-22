@@ -14,7 +14,8 @@ m-5{
 }
 
 body{
-    background-image: url("images/bg-image.png");
+    background-image: url(../images/bg-image.png); /*caminho absoluto*/   
+    background-color: #1ba38c;
 }
 
 div{
