@@ -1,4 +1,4 @@
-# github-pages-j-byte
+# J Byte 
 
 Projeto de desenvolvimento web apenas do Front-End.
 
@@ -7,3 +7,6 @@ para um profissional que queira oferecer serviços. Neste caso, são serviços d
 e desenvolvimento. 
 
 Ferramentas: Bootstrap, JQuery, JS, CSS e HTML. 
+
+Acesse as páginas estáticas a partir de:
+https://jefferson1919.github.io/J-Byte-Web/
