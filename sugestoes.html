@@ -12,13 +12,7 @@
 	<!-- a biblioteca jQuery é utilizada pelo bootstrap, então ela deve ser chamada antes do bootstrap.min.js-->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<title>Sugestões :: JByte</title>
-	<!--<script>
-			$(document).ready(function(){ //método que aguarda a página carregar
-				$("#btSubmitDuvidas").click(function(){ //método que é executado ao clicar no #btMostrar
-					alert("Suas dúvidas foram enviado e em breve entraremos em contato!");
-				});
-			});
-		</script>-->
+	
 </head>
 
 <body class="pt-5">
@@ -58,17 +52,17 @@
 			</nav>
 		</div>
 		<div class="container">
-			<form class="form-text container p-2 col-xs-12 col-sm-12 col-md-4 col-lg-4" autocomplete="on">
+			<form class="form-text container p-2 col-xs-12 col-sm-12 col-md-4 col-lg-4" id="form-sugestoes" autocomplete="on">
 				<fieldset>
 					<div class="bg-color-especial text-white p-2 mt-2">
 						<label for="idArea">
 							<h6>Mensagem</h6>
 						</label>
-						<textarea id="idArea" rows="7" cols="49" class="form-control" name="mensage"
+						<textarea id="idArea" rows="7" cols="49" class="form-control" name="mensagem"
 							placeholder="Sua mensagem aqui" required autofocus></textarea><br>
 					</div>
 					<div class="text-center m-1">
-						<button type="submit" id="btSubmitDuvidas" class="btn btn-warning btn-lg">Submeter</button>
+						<button id="btSubmitSugestoes" class="btn btn-warning btn-lg">Submeter</button>
 					</div>
 				</fieldset>
 			</form>
@@ -91,6 +85,8 @@
 				</div>
 			</footer>
 		</div>
+	</div>
+	<script src="js/validarSubmeter.js"></script>
 </body>
 
 </html>

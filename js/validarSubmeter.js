@@ -19,9 +19,18 @@ $(document).ready(function () {
             }
         },
         submitHandler: function (form) {
-            form.submit();
+            //form.submit();
             alert("Seu formulário foi enviado e em breve retornaremos contato.");
         }
     });
+
+
+    $("#btSubmit").click(function () {
+        function handleSubmit(event) {
+            event.preventDefault();
+        }
+        var form = document.querySelector('form');
+        form.addEventListener('submit', handleSubmit);
+    })
 });
 
